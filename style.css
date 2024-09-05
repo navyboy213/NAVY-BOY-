@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --primary-color: black;
+  --secondary-color: brown;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-bottom: 2px solid grey;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.nav-and-action {
+  display: flex;
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav > ul {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.hamburger {
+  display: none;
+}
+.divider {
+  width: 1px;
+  background-color: yellow;
+  height: 100%;
+}
+
+main {
+  height: calc(100vh - 80px);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.action > button {
+  display: flex;
+  cursor: pointer;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: black;
+}
+.action > a {
+  display: flex;
+  background-color: white;
+  color: black;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.action > a:hover {
+  background-color: brown;
+  transition: 0.5s;
+}
+.hero {
+  background-color: var(--primary-color);
+  color: white;
+  min-height: 100%;
+  padding: 6px 0;
+}
+
+.hero > .container {
+  display: flex;
+}
+
+.hero-img {
+  position: relative;
+  background-color: grey;
+  min-height: 200px;
+  min-width: 300px;
+}
+
+.hero-img img {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  border: 8px solid var(--primary-color);
+}
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 100%;
+}
+
+.theme {
+  cursor: pointer;
+  .body {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .darkmode {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.hero-text > h1 {
+  margin-bottom: 10px;
+}
+
+.hero-text > p {
+  margin-bottom: 20px;
+}
+p {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 700px) {
+  .nav-and-action {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hero > .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
